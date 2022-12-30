@@ -1,0 +1,13 @@
+title NODULE_1068_NODULE_1
+intensity 5.5
+blackbody 5e5 K vary
+grid range 3 to 9 in 0.5 dex steps ncpus 12
+hden 10 vary
+grid range -2 to 10 in 0.5 dex steps
+# log of hydrogen density cm-3
+stop column density 22 # log of hydrogen column density cm-2
+iterate to convergence
+print last iteration
+save grid "grid_info.txt" separate
+save overview "blr.ovr" last
+save continuum "blr.con" units microns last
